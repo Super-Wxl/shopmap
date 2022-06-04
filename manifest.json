@@ -50,32 +50,33 @@
     /* 快应用特有相关 */
     "mp-weixin" : {
         /* 小程序特有相关 */
-        "appid" : "",
+        "appid" : "wxe693838547ae307e",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "minified" : true
         },
         "usingComponents" : true
     },
     "vueVersion" : "2",
-	
-	"h5" : {
-	       "title" : "",
-	       "domain" : "",
-	       "router" : {
-	           "mode" : "hash",
-	           "base" : "/h5/"
-	       },
-	       "devServer" : {
-			// "https" : true,
-			"proxy":{
-				"/api": {		             
-					"target":"https://域名/api",
-					"changeOrigin": true,//是否跨域
-					"secure": true,// 设置支持https协议的代理
-					"pathRewrite":{"^/api":""}
-				}
-			}
-			
-	       }
-	   }
+    "h5" : {
+        "title" : "",
+        "domain" : "",
+        "router" : {
+            "mode" : "hash",
+            "base" : "/h5/"
+        },
+        "devServer" : {
+            // "https" : true,
+            "proxy" : {
+                "/api" : {
+                    "target" : "https://域名/api",
+                    "changeOrigin" : true, //是否跨域
+                    "secure" : true, // 设置支持https协议的代理
+                    "pathRewrite" : {
+                        "^/api" : ""
+                    }
+                }
+            }
+        }
+    }
 }
