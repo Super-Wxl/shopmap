@@ -1,5 +1,5 @@
 <template>
-  <view class="goods-item">
+  <view class="goods-item" @click="gotoGoodsDetailHandler">
     <!-- 商品左侧图片区域 -->
     <view class="goods-item-left">
       <image :src="goods.goods_small_logo || defaultPic" class="goods-pic"></image>
@@ -32,6 +32,13 @@
         defaultPic: 'https://img3.doubanio.com/f/movie/8dd0c794499fe925ae2ae89ee30cd225750457b4/pics/movie/celebrity-default-medium.png',
       }
     },
+	methods:{
+		// 点击了商品列表
+		gotoGoodsDetailHandler() {
+		  // 触发外界通过 @click 绑定的 click 事件处理函数
+		  this.$emit('click')
+		}
+	},
 	filters: {
 	  // 把数字处理为带两位小数点的数字
 	  tofixed(num) {
